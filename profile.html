@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <nav class="navbar">
+            <div class="logo">MyApp</div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-user"></i> Profile</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+                <button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </nav>
+        
+        <div class="profile-content">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profilePic">
+                    <button class="change-avatar-btn"><i class="fas fa-camera"></i></button>
+                </div>
+                <div class="profile-info">
+                    <h1 id="userName">Welcome, Admin</h1>
+                    <p class="email" id="userEmail">admin@example.com</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-value">42</span>
+                            <span class="stat-label">Posts</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">1.2k</span>
+                            <span class="stat-label">Followers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">890</span>
+                            <span class="stat-label">Following</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="personal">Personal Info</button>
+                <button class="tab-btn" data-tab="activity">Activity</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </div>
+
+            <div class="tab-content" id="personal">
+                <div class="profile-details">
+                    <div class="detail-section">
+                        <div class="section-header">
+                            <h2>Personal Information</h2>
+                            <button class="edit-btn" id="editProfileBtn">
+                                <i class="fas fa-edit"></i> Edit Profile
+                            </button>
+                        </div>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <label><i class="fas fa-user"></i> Full Name</label>
+                                <p id="fullName">Admin User</p>
+                            </div>
+                            <div class="info-item">
+                                <label><i class="fas fa-phone"></i> Phone</label>
+                                <p id="phone">+1 234 567 8900</p>
+                            </div>
+                            <div class="info-item">
+                                <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                                <p id="location">New York, USA</p>
+                            </div>
+                            <div class="info-item">
+                                <label><i class="fas fa-calendar-alt"></i> Join Date</label>
+                                <p id="joinDate">January 1, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Bio</h2>
+                        <p id="userBio" class="bio-text">
+                            Frontend developer passionate about creating beautiful and functional web applications.
+                        </p>
+                    </div>
+
+                    <div class="detail-section">
+                        <h2>Skills</h2>
+                        <div class="skills-container" id="skillsList">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="editName" name="name">
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel" id="editPhone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="editLocation" name="location">
+                </div>
+                <div class="form-group">
+                    <label>Bio</label>
+                    <textarea id="editBio" name="bio"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Skills (comma-separated)</label>
+                    <input type="text" id="editSkills" name="skills">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit" class="save-btn">Save Changes</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html> 
