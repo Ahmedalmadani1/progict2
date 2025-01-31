@@ -5,49 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">MyWebsite</div>
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>DevPortal</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="login.html" class="login-link">Login</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="login.html" class="login-link"><i class="fas fa-user"></i> Login</a></li>
             </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
+        <div class="nav-overlay"></div>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Welcome to Our Website</h1>
-            <p>Discover amazing content and services</p>
-            <button class="cta-button">Get Started</button>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to DevPortal</h1>
+                <p class="hero-text">Your Gateway to Professional Development Solutions</p>
+                <div class="cta-buttons">
+                    <button class="cta-button primary">Get Started</button>
+                    <button class="cta-button secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400" alt="Hero Image">
+            </div>
         </section>
 
-        <section class="features">
-            <h2>Our Features</h2>
+        <section id="services" class="features">
+            <h2>Our Services</h2>
+            <p class="section-subtitle">Discover what we can do for you</p>
             <div class="feature-cards">
                 <div class="card">
-                    <h3>Feature 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web Development</h3>
+                    <p>Custom web solutions tailored to your needs with modern technologies.</p>
                 </div>
                 <div class="card">
-                    <h3>Feature 2</h3>
-                    <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform mobile applications for iOS and Android.</p>
                 </div>
                 <div class="card">
-                    <h3>Feature 3</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud Solutions</h3>
+                    <p>Scalable cloud infrastructure and deployment services.</p>
                 </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p class="section-subtitle">Who we are and what we do</p>
+                <p class="about-text">
+                    We are a team of passionate developers dedicated to creating exceptional digital experiences. 
+                    With years of experience in the industry, we deliver high-quality solutions that help businesses grow.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Team Members</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p class="section-subtitle">Get in touch with our team</p>
+            <div class="contact-container">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button primary">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DevPortal</h3>
+                <p>Your trusted partner in digital solutions.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> info@devportal.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, City</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DevPortal. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
